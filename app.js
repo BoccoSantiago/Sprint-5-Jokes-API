@@ -8,7 +8,7 @@ const dadJokes = async() => {
 }
  });
     const response = await joke.json()
-     console.log(response.joke) 
+    text.innerHTML = response.joke
 
 }
 

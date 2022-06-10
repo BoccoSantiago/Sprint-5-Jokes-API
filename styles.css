@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+
+
+body{
+    background: url(img/rtx2c9ws.jpg) center no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+
+.container{
+    
+    font-weight: 900;
+    background-color: rgba(0, 102, 255, 0.685);
+    text-align: center;
+    padding: 10px;
+    width: 50vw;
+    color: white;
+    border-radius: 10px;
+
+}
+
+#text{
+    padding: 0px;
+}
+#btn{
+    background-color: rgb(142, 78, 201);
+    font-size: 15px;
+    padding: 10px; 
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 0;
+    box-shadow: 5px 5px 10px black;
+    color: white;
+    cursor: pointer;
+}
+
+#btn:hover {
+    background-color: rgb(173, 112, 229)
+}
+
+#btn:active {
+        background-color: rgb(173, 112, 229);
+        transform: scale(.98);
+}
+
