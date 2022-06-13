@@ -1,72 +1,102 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 
+body{
+    margin: auto;
+}
 
 nav{
-font-family: 'Poppins', sans-serif;
-font-weight: 1000;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 1000;
+    margin: 10px; 
+    z-index: inherit;
+}
+
+#forecast {
+    display:flex;
+    align-items: center;
+    z-index: 1000;
+    
 }
 
 section{
- /*    background: url(img/smiley.jpg) center repeat; */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 95vh;
+    height: 90vh;
     font-family: 'Poppins', sans-serif;
-    
+    background: url('img/blob.svg') no-repeat center;
+    background-size: 800px;
     
 }
 
 
 .container{
     font-weight: 900;
-    background-color: rgba(12, 144, 233, 0.905);
     text-align: center;
     padding: 10px;
     width: auto;
     color: white;
-    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0);
 }
 
 #text{
-    padding: 0px;
+    margin: auto;
+    width: 30vw;
+    text-align: center;
 }
+
 #btn{
-    background-color: rgb(142, 78, 201);
+    background-color: rgb(255, 217, 0);
     font-size: 15px;
     padding: 10px; 
     margin-top: 20px;
     margin-bottom: 10px;
-    border-radius: 10px;
-    border: 0;
-    box-shadow: 5px 5px 10px black;
-    color: white;
+    border-radius: 20px;
+    border: 3px solid black;
+    box-shadow: 5px 5px 1px black;
     cursor: pointer;
     font-family: 'Poppins', sans-serif;
     font-weight: 1000;
 }
 
 #btn:hover {
-    background-color: rgb(173, 112, 229)
+    background-color: rgb(238, 255, 48);
 }
 
 #btn:active {
-    background-color: rgb(173, 112, 229);
+    background-color: rgb(238, 255, 48);
     transform: scale(.98);
 }
 
 #scores button{
-    font-family: 'Poppins', sans-serif;
-    font-weight: 1000;
-    background-color: rgb(230, 204, 255);
-    border: 0;
-    padding: 10px;
-    margin-top: 15px;
-    margin-left: 10px;
-    cursor: pointer;
-    box-shadow: 5px 5px 10px rgb(119, 127, 242);
-    color: rgb(0, 0, 0);
-    border-radius: 10px;
+    background: none;
+	border: none;
+    font-size: 30px;
+	cursor: pointer;
+    padding-top: 10px;
 }
 
+.blob2 {
+    position: absolute;
+    width: 25%;
+    bottom: 5%;
+    left: 7%;
+    z-index: -1;
+}
+.blob3 {
+    position: absolute; 
+    width: 25%;
+    top: 7%;
+    right: 7%;    
+}
 
+@media (max-width: 750px) {
+
+#text{
+    margin: auto;
+    width: 80vw;
+    text-align: center;
+ }
+
+
+}

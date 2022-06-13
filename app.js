@@ -1,4 +1,4 @@
-const button = document.getElementById("btn");
+const btn = document.getElementById("btn");
 const jokeText = document.getElementById("text");
 const scoresDiv = document.getElementById("scores");
 const forecast = document.getElementById("forecast");
@@ -8,6 +8,8 @@ let date = d.toISOString();
 scoresDiv.style.display = "none";
 const weatherApi =
   "https://api.openweathermap.org/data/2.5/weather?q=Barcelona&exclude=hourly,daily&units=metric&lang=sp&appid=f033bc883319078da9dd983162b7cb55";
+  
+
 
 /*Utilizando Async Await */
 
@@ -43,9 +45,11 @@ const weather = () => {
   fetch(weatherApi)
     .then((response) => response.json())
     .then((data) => {
-      forecast.innerHTML = `${data.main.temp.toFixed(1)} °C con 
-      ${data.weather[0].description}`;
+      const icon = data.weather[0].icon;
+      forecast.innerHTML = `<img src="weather/${icon}.png" style="width:50px; border-right: 2px solid gray; margin-right: 10px"> 
+      ${data.main.temp.toFixed(1)} °C ${data.name}`;
       console.log(data);
+      
     });
 };
 weather();
