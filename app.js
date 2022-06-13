@@ -1,16 +1,13 @@
 const button = document.getElementById("btn");
 const jokeText = document.getElementById("text");
 const scoresDiv = document.getElementById("scores");
-const forecast = document.getElementById("forecast")
+const forecast = document.getElementById("forecast");
 const reportAcudits = [];
 const d = new Date();
 let date = d.toISOString();
 scoresDiv.style.display = "none";
-const key = fc039ba514d11c2f32d2397f66b8233a;
-
-/* const bad = document.getElementById('1');
-const good = document.getElementById('2');
-const excellent = document.getElementById('3'); */
+const weatherApi =
+  "https://api.openweathermap.org/data/2.5/weather?q=Barcelona&exclude=hourly,daily&units=metric&lang=sp&appid=f033bc883319078da9dd983162b7cb55";
 
 /*Utilizando Async Await */
 
@@ -43,14 +40,15 @@ const dadJokes = () => {
 btn.addEventListener("click", dadJokes);
 
 const weather = () => {
-   fetch("https://api.openweathermap.org/data/3.0/onecall?lat=33.44&lon=-94.04&exclude=hourly,daily&appid=${key}")
-   .then((response) => response.json())
-   .then((data) => {
-     forecast.innerHTML = data; 
+  fetch(weatherApi)
+    .then((response) => response.json())
+    .then((data) => {
+      forecast.innerHTML = `${data.main.temp.toFixed(1)} °C con 
+      ${data.weather[0].description}`;
       console.log(data);
-})
+    });
 };
-weather()
+weather();
 
 function getScore(id) {
   reportAcudits.push({
