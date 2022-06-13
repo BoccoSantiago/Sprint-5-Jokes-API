@@ -4,9 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily Joke</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Daily Dad Joke</title>
 </head>
+<nav>
+    <div id="forecast">FORECAST</div>
+</nav>
 <body>
+    <section>
+        <div class="container">
+        <h1>Preparat per riure? &#129315</h1>
+            <div id="text"></div>
+        <div id="scores">
+            <button id="1" type="button" onclick="getScore(1)">Bad</button>   
+            <button id="2" type="button" onclick="getScore(2)">Good</button>   
+            <button id="3" type="button" onclick="getScore(3)">Excellent</button>   
+        </div>    
+        <button id="btn">Següent acudit</button>    
+        </div> 
+    </section>
+
     <script type='text/javascript' src='app.js'></script>
 </body>
 </html>
