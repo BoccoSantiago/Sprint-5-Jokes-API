@@ -37,7 +37,7 @@ const dadJokes = () => {
     });
 };
 
-btn.addEventListener("click", dadJokes);
+//btn.addEventListener("click", dadJokes);
 
 const weather = () => {
   fetch(weatherApi)
@@ -58,3 +58,19 @@ function getScore(id) {
   });
   console.log(reportAcudits);
 }
+
+const chuckNorrisJokes = async() => {
+  const joke = await fetch('https://api.chucknorris.io/jokes/random');
+  const response = await joke.json()
+  jokeText.innerHTML = response.value
+  console.log(response)
+}
+
+let toggle = true;
+
+function toggleFunction(){
+   toggle ? dadJokes() : chuckNorrisJokes();
+   toggle = !toggle;
+}
+
+btn.addEventListener("click", toggleFunction);
